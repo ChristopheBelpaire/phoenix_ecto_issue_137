@@ -1,0 +1,7 @@
+<%= f = form_for @order, "#", id: :purchase_order_form %>
+   <%= text_input f, :number%>
+  <%= for fp <- inputs_for(f, :line_orders) do%>
+    <%= text_input fp, :product %>
+    <%= text_input fp, :quantity %>
+  <% end %>
+</form>
